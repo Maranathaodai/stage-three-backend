@@ -1,0 +1,80 @@
+{
+  "name": "Code Review Assistant",
+  "short_description": "AI-powered code review assistant",
+  "long_description": "An intelligent AI agent that analyzes code snippets shared in Telex.im and provides comprehensive code reviews. Detects bugs, security vulnerabilities, performance issues, and suggests improvements with actionable feedback and quality scores.",
+  "category": "code-review",
+  "description": "Provide instant intelligent code reviews on snippets shared",
+  "version": "1.0.0",
+  "nodes": [
+    {
+      "id": "message-receiver",
+      "type": "input",
+      "position": [100, 200],
+      "data": {
+        "handler": "receiveMessage"
+      }
+    },
+    {
+      "id": "code-extractor",
+      "type": "processor",
+      "position": [300, 200],
+      "data": {
+        "function": "extractCode",
+        "input": "message",
+        "output": "codeBlock"
+      }
+    },
+    {
+      "id": "review-processor",
+      "type": "agent",
+      "position": [500, 200],
+      "data": {
+        "agent": "code-review-assistant",
+        "input": "codeBlock",
+        "output": "reviewResult"
+      }
+    },
+    {
+      "id": "response-formatter",
+      "type": "processor",
+      "position": [700, 200],
+      "data": {
+        "function": "formatResponse",
+        "input": "reviewResult",
+        "output": "formattedResponse"
+      }
+    },
+    {
+      "id": "message-sender",
+      "type": "output",
+      "position": [900, 200],
+      "data": {
+        "handler": "sendResponse",
+        "input": "formattedResponse"
+      }
+    }
+  ],
+  "edges": [
+    {
+      "id": "e1",
+      "source": "message-receiver",
+      "target": "code-extractor"
+    },
+    {
+      "id": "e2",
+      "source": "code-extractor",
+      "target": "review-processor"
+    },
+    {
+      "id": "e3",
+      "source": "review-processor",
+      "target": "response-formatter"
+    },
+    {
+      "id": "e4",
+      "source": "response-formatter",
+      "target": "message-sender"
+    }
+  ]
+}
+
