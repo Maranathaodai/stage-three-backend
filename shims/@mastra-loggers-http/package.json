@@ -4,5 +4,11 @@
   "description": "Shim package to avoid bundler circular reexport during deploy",
   "type": "commonjs",
   "main": "index.cjs",
+  "exports": {
+    ".": {
+      "import": "./index.esm.js",
+      "require": "./index.cjs"
+    }
+  },
   "license": "MIT"
 }
