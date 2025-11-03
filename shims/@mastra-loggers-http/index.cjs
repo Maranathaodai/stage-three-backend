@@ -5,12 +5,11 @@ class HttpTransport {
   }
 }
 
-// Provide both a default export (module.exports) and a named export property so
-// consumers that statically analyze reexports can resolve the symbol without
-// producing a self-reexport cycle.
-module.exports = HttpTransport;
-module.exports.HttpTransport = HttpTransport;
+// Export only a named export to avoid default/named reexport confusion when the
+// bundler converts CommonJS -> ESM. This keeps the module shape simpler and
+// reduces chances of creating a self-reexport cycle during static analysis.
 exports.HttpTransport = HttpTransport;
+module.exports = { HttpTransport };
 class HttpTransport {
   constructor() {}
   send() {
