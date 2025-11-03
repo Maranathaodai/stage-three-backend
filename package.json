@@ -21,7 +21,8 @@
   "license": "MIT",
   "overrides": {
     "@mastra/loggers": "file:./shims/@mastra-loggers",
-    "@mastra/libsql": "file:./shims/@mastra-libsql"
+    "@mastra/libsql": "file:./shims/@mastra-libsql",
+    "@mastra/loggers-http": "file:src/shims/@mastra-loggers-http.mjs"
   },
   "dependencies": {
     "@google/generative-ai": "^0.21.0",
