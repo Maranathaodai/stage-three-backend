@@ -3,9 +3,11 @@
   "version": "0.0.0-shim",
   "description": "Shim package to avoid bundler circular reexport during deploy",
   "type": "commonjs",
-  "main": "index.cjs",
+  "main": "./index.cjs",
   "exports": {
-    ".": "./index.cjs"
+    ".": {
+      "require": "./index.cjs"
+    }
   },
   "license": "MIT"
 }
