@@ -5,10 +5,7 @@
   "type": "commonjs",
   "main": "index.cjs",
   "exports": {
-    ".": {
-      "import": "./index.esm.js",
-      "require": "./index.cjs"
-    }
+    ".": "./index.cjs"
   },
   "license": "MIT"
 }
