@@ -1,10 +1,10 @@
-export const HttpTransport = class HttpTransportStub {
+export class HttpTransport {
   constructor() {}
   send() {
     // no-op stub for deploy bundling
     return Promise.resolve();
   }
-};
+}
 
-// Default export as an object with the named export to match possible reexport patterns
-export default { HttpTransport };
+// Export default as the same binding to avoid reexport/self-reference issues
+export default HttpTransport;
