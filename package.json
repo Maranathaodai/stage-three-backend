@@ -21,14 +21,12 @@
   "license": "MIT",
   "overrides": {
     "@mastra/loggers": "file:./shims/@mastra-loggers",
-    "@mastra/loggers-http": "file:./shims/@mastra-loggers-http",
     "@mastra/libsql": "file:./shims/@mastra-libsql"
   },
   "dependencies": {
     "@google/generative-ai": "^0.21.0",
   "@mastra/core": "0.23.3",
   "@mastra/loggers": "file:./shims/@mastra-loggers",
-  "@mastra/loggers-http": "file:./shims/@mastra-loggers-http",
   "@mastra/libsql": "file:./shims/@mastra-libsql",
     "cors": "^2.8.5",
     "dotenv": "^16.3.1",
