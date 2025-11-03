@@ -1,0 +1,21 @@
+{
+  "name": "@mastra/loggers-http",
+  "version": "0.0.0-shim",
+  "description": "Shim for @mastra/loggers-http to avoid bundler reexport cycles",
+  "type": "commonjs",
+  "main": "index.cjs",
+  "license": "MIT"
+}
+{
+  "name": "@mastra/loggers-http",
+  "version": "0.0.0-shim",
+  "description": "Shim package to avoid bundler circular reexport during deploy",
+  "type": "commonjs",
+  "main": "./index.cjs",
+  "exports": {
+    ".": {
+      "require": "./index.cjs"
+    }
+  },
+  "license": "MIT"
+}
