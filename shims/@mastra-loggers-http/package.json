@@ -1,0 +1,8 @@
+{
+  "name": "@mastra/loggers-http",
+  "version": "0.0.0-shim",
+  "description": "Shim package to avoid bundler circular reexport during deploy",
+  "type": "module",
+  "main": "index.js",
+  "license": "MIT"
+}
