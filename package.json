@@ -20,15 +20,12 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
-  "@google/generative-ai": "^0.21.0",
-  "@mastra/core": "0.23.2",
-  "@mastra/loggers": "file:./shims/@mastra-loggers",
-  "@mastra/loggers-http": "file:./shims/@mastra-loggers-http",
-  "@mastra/libsql": "file:./shims/@mastra-libsql",
+    "@google/generative-ai": "^0.21.0",
+    "@mastra/core": "0.23.3",
+    "@mastra/loggers": "0.23.3",
     "cors": "^2.8.5",
     "dotenv": "^16.3.1",
     "express": "^4.18.2",
-    
     "zod": "^3.22.4",
     "typescript": "^5.3.3"
   },
