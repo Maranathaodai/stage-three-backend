@@ -1,6 +1,10 @@
-// Mastra Cloud Entry Point
-// This file is required by Mastra Cloud deployment
+import { Mastra } from '@mastra/core';
 
-export { default } from '../index.js';
+// Mastra Cloud requires a named export `mastra`
+export const mastra = new Mastra({
+  name: 'Code Review Assistant',
+  description: 'Telex coworker that reviews code snippets and provides feedback',
+} as any);
 
 
+export default mastra;
