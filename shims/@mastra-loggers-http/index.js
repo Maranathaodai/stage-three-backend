@@ -6,4 +6,5 @@ export const HttpTransport = class HttpTransportStub {
   }
 };
 
-export default HttpTransport;
+// Default export as an object with the named export to match possible reexport patterns
+export default { HttpTransport };
